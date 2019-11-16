@@ -42,7 +42,7 @@
           ? 'translate-x-0 ease-out transition-medium'
           : '-translate-x-full ease-in transition-medium'
       "
-      class="fixed flex-shrink-0 w-64 bg-gray-800 z-50 inset-y-0 left-0 overflow-auto"
+      class="fixed flex-shrink-0 w-64 bg-gray-800 z-50 inset-y-0 left-0 overflow-auto md:translate-x-0"
     >
       <div class="md:hidden absolute top-0 right-0 mr-8 mt-10">
         <button
