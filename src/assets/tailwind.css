@@ -10,11 +10,11 @@
 @tailwind utilities;
 
 @responsive {
-  .-translate-y-full {
-    transform: translateY(-100%);
+  .-translate-x-full {
+    transform: translateX(-100%);
   }
-  .translate-y-0 {
-    transform: translateY(0);
+  .translate-x-0 {
+    transform: translateX(0);
   }
   .transition-medium {
     transition-duration: 0.2s;

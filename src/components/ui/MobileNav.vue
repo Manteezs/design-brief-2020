@@ -1,14 +1,14 @@
 <template>
-  <header id="menu" class="fixed w-screen bg-gray-800 shadow-md top-0 left-0 z-50 sm:hidden">
+  <header
+    id="menu"
+    class="fixed w-screen bg-gray-800 shadow-md top-0 left-0 z-50 md:hidden"
+  >
     <!-- This component is going to be deleted sometime soon; I'm going to just make the desktop nav responsive and have it translate in and out. That way, I don't have to maintain two different nav components whenever it's possible to use just one. -->
-    <div class="container mx-auto sm:flex sm:justify-between sm:items-center sm:px-4 sm:py-3">
-      <div class="flex items-center justify-between px-4 py-3 sm:p-0">
-        <div>
-          <router-link to="/">
-            <img class="h-8" src="/img/logos/dark-background.svg" alt="Mint" />
-          </router-link>
-        </div>
-        <div class="sm:hidden">
+    <div
+      class="container mx-auto md:flex md:justify-start md:items-center md:px-4 md:py-3"
+    >
+      <div class="flex items-center justify-start px-4 py-3 md:p-0">
+        <div class="md:hidden">
           <button
             @click="isOpen = !isOpen"
             type="button"
@@ -28,91 +28,16 @@
             </svg>
           </button>
         </div>
+        <div>
+          <router-link to="/">
+            <img
+              class="h-8 ml-4"
+              src="/img/logos/dark-background.svg"
+              alt="Mint logo"
+            />
+          </router-link>
+        </div>
       </div>
-      <nav :class="isOpen ? 'block' : 'hidden'" class="px-6 pt-2 pb-4 sm:flex sm:p-0">
-        <div class="mt-4">
-          <h2 class="text-xs uppercase text-gray-500 font-semibold tracking-wide">Models</h2>
-          <div class="mt-2 -mx-3">
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Hydrogen</span>
-              <span
-                class="text-xs font-semibold bg-teal-900 text-teal-600 px-2 py-px rounded-full uppercase tracking-wide"
-              >New</span>
-            </a>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-800"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Helium</span>
-            </a>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Lithium</span>
-            </a>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Beryllium</span>
-              <span
-                class="text-xs font-semibold bg-teal-900 text-teal-600 px-2 py-px rounded-full uppercase tracking-wide"
-              >New</span>
-            </a>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Boron</span>
-            </a>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Carbon</span>
-            </a>
-          </div>
-        </div>
-        <div class="mt-8">
-          <h2 class="text-xs uppercase text-gray-500 font-semibold tracking-wide">Company</h2>
-          <div class="mt-2 -mx-3">
-            <router-link
-              to="/support"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Support</span>
-            </router-link>
-            <router-link
-              to="/dictionary"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Dictionary</span>
-            </router-link>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Carbon Impact</span>
-            </a>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Press</span>
-            </a>
-            <a
-              href="#"
-              class="flex justify-between px-3 py-2 rounded-lg items-center hover:bg-gray-900"
-            >
-              <span class="text-sm font-medium text-gray-400 hover:text-gray-300">Legal</span>
-            </a>
-          </div>
-        </div>
-      </nav>
     </div>
   </header>
 </template>
