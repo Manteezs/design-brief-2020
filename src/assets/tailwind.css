@@ -2,24 +2,63 @@
 @tailwind components;
 
 .wavy-border {
-    @apply left-0 w-full bottom-auto;
-    top: -6px;
-    transform: rotate(180deg);
+  @apply left-0 w-full bottom-auto;
+  top: -6px;
+  transform: rotate(180deg);
+}
+
+.btn {
+  @apply inline-block px-6 py-2 rounded-full uppercase tracking-wider font-semibold text-sm;
+}
+
+.btn-teal {
+  @apply bg-teal-500 text-white;
+}
+
+.btn-teal:hover {
+  @apply bg-teal-900 shadow-2xl;
 }
 
 @tailwind utilities;
 
+@responsive {
+  .-translate-x-full {
+    transform: translateX(-100%);
+  }
+  .translate-x-0 {
+    transform: translateX(0);
+  }
+  .transition-medium {
+    transition-duration: 0.2s;
+  }
+  .transition-long {
+    transition-duration: 0.5s;
+  }
+  .transition-none {
+    transition-property: none;
+  }
+  .ease {
+    transition-timing-function: cubic-bezier(0.33, 0.16, 0.27, 1);
+  }
+}
+
+@variants {
+  .transition-fade {
+    transition: opacity 0.2s;
+  }
+}
+
 .list-definition {
-    counter-reset: definition-counter;
+  counter-reset: definition-counter;
 }
 .list-definition li {
-    counter-increment: definition-counter;
+  counter-increment: definition-counter;
 }
 .list-definition li::before {
-    content: counter(definition-counter) " ";
-    @apply text-teal-500 font-bold ml-4 mr-2;
+  content: counter(definition-counter) " ";
+  @apply text-teal-500 font-bold ml-4 mr-2;
 }
 
 .router-link-exact-active {
-    @apply bg-gray-800 text-gray-300;
+  @apply bg-gray-800 text-gray-300;
 }

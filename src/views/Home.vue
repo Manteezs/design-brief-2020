@@ -1,7 +1,9 @@
 <template>
   <main id="home">
     <div class="bg-gray-100 flex">
-      <div class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
+      <div
+        class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12"
+      >
         <div class="xl:max-w-lg xl:mx-auto">
           <img
             class="-mt-4 rounded-lg shadow-xl sm:-mt-4 sm:h-72 sm:w-full sm:object-cover sm:object-center lg:hidden"
@@ -15,14 +17,20 @@
             <br class="hidden sm:block" />
             <span class="text-teal-500">It's time to embrace it.</span>
           </h1>
-          <p
-            class="mt-4 text-gray-600 sm:text-xl sm:mt-6"
-          >Electric vehicles are taking over the world. By 2030, nearly a third of all vehicles in America will be electric. Here at Mint, we're rising to meet those needs with beautiful, sustainable products.</p>
+          <p class="mt-4 text-gray-600 sm:text-xl sm:mt-6">
+            Electric vehicles are taking over the world. By 2030, nearly a third
+            of all vehicles in America will be electric. Here at Mint, we're
+            rising to meet those needs with beautiful, sustainable products.
+          </p>
           <div class="mt-4 sm:mt-6">
+            <a href="#" class="btn btn-teal shadow-lg transition-medium"
+              >Our products</a
+            >
             <router-link
               to="/dictionary"
-              class="inline-block bg-teal-500 text-white px-6 py-2 rounded-full shadow-lg uppercase tracking-wider font-semibold text-sm"
-            >More about our company</router-link>
+              class="ml-4 btn btn-secondary border border-gray-400 text-gray-800 hover:bg-gray-900 hover:text-white hover:shadow-2xl hover:border-gray-900 transition-medium"
+              >More about us</router-link
+            >
           </div>
         </div>
       </div>
@@ -36,10 +44,18 @@
     </div>
     <div>
       <div class="max-w-md sm:max-w-xl lg:max-w-6xl mx-auto px-8 lg:px-12 py-8">
-        <h2 class="text-3xl text-gray-900 font-bold">A car for every lifestyle.</h2>
-        <p class="text-gray-600">No matter what you do, there's a Mint model to fit your needs.</p>
+        <h2 class="text-3xl text-gray-900 font-bold">
+          A car for every lifestyle.
+        </h2>
+        <p class="text-gray-600">
+          No matter what you do, there's a Mint model to fit your needs.
+        </p>
         <div class="flex flex-wrap -mx-4">
-          <div class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3" v-for="(model, i) in carModels" :key="i">
+          <div
+            class="mt-6 w-full px-4 lg:w-1/2 xl:w-1/3"
+            v-for="(model, i) in carModels"
+            :key="i"
+          >
             <CarModel :model="model" />
           </div>
         </div>
